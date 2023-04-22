@@ -22,7 +22,9 @@ class Ex01BmiCalculatorTest {
         double weight = -70.0;
         double height = 1.75;
 
-        assertThrows(IllegalArgumentException.class, () -> Ex01BmiCalculator.calculateBmi(weight, height));
+        IllegalArgumentException exception = assertThrows(IllegalArgumentException.class,
+                () -> Ex01BmiCalculator.calculateBmi(weight, height));
+        assertEquals("Weight and height must be positive numbers", exception.getMessage());
     }
 
     @Test
@@ -30,7 +32,9 @@ class Ex01BmiCalculatorTest {
         double weight = 70.0;
         double height = -1.75;
 
-        assertThrows(IllegalArgumentException.class, () -> Ex01BmiCalculator.calculateBmi(weight, height));
+        IllegalArgumentException exception = assertThrows(IllegalArgumentException.class,
+                () -> Ex01BmiCalculator.calculateBmi(weight, height));
+        assertEquals("Weight and height must be positive numbers", exception.getMessage());
     }
 
     @Test
@@ -38,7 +42,9 @@ class Ex01BmiCalculatorTest {
         double weight = 0;
         double height = 1.75;
 
-        assertThrows(IllegalArgumentException.class, () -> Ex01BmiCalculator.calculateBmi(weight, height));
+        IllegalArgumentException exception = assertThrows(IllegalArgumentException.class,
+                () -> Ex01BmiCalculator.calculateBmi(weight, height));
+        assertEquals("Weight and height must be positive numbers", exception.getMessage());
     }
 
     @Test
@@ -46,7 +52,9 @@ class Ex01BmiCalculatorTest {
         double weight = 70.0;
         double height = 0;
 
-        assertThrows(IllegalArgumentException.class, () -> Ex01BmiCalculator.calculateBmi(weight, height));
+        IllegalArgumentException exception = assertThrows(IllegalArgumentException.class,
+                () -> Ex01BmiCalculator.calculateBmi(weight, height));
+        assertEquals("Weight and height must be positive numbers", exception.getMessage());
     }
 
 }

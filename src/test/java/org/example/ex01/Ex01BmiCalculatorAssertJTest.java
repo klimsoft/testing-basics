@@ -1,6 +1,7 @@
-package org.example;
+package org.example.ex01;
 
 import org.assertj.core.data.Offset;
+import org.example.ex01.Ex01BmiCalculator;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.*;

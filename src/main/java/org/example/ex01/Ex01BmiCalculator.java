@@ -1,4 +1,4 @@
-package org.example;
+package org.example.ex01;
 
 public class Ex01BmiCalculator {
     public static double calculateBmi(double weight, double height) {

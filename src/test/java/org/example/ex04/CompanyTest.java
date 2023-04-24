@@ -20,13 +20,33 @@ public class CompanyTest {
 
     @Test
     @DisplayName("Should add employees")
-    public void shouldAddEmployees() {
+    public void shouldAddEmployees1() {
         company.addEmployee(employee1);
         company.addEmployee(employee2);
 
         assertEquals(2, company.getEmployees().length);
         assertTrue(Arrays.asList(company.getEmployees()).contains(employee1));
         assertTrue(Arrays.asList(company.getEmployees()).contains(employee2));
+    }
+
+    @Test
+    @DisplayName("Should add employees")
+    public void shouldAddEmployees2() {
+        company.addEmployee(employee1);
+        company.addEmployee(employee2);
+        Employee[] expected = {employee1, employee2};
+
+        assertTrue(Arrays.equals(company.getEmployees(), expected));
+    }
+
+    @Test
+    @DisplayName("Should add employees")
+    public void shouldAddEmployees3() {
+        company.addEmployee(employee1);
+        company.addEmployee(employee2);
+        Employee[] expected = {employee1, employee2};
+
+        Assertions.assertArrayEquals(company.getEmployees(), expected);
     }
 
     @Test

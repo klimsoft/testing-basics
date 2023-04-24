@@ -3,6 +3,7 @@ package org.example.ex02;
 import org.junit.jupiter.api.*;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 public class AnnotationPresentation {
     private static int count = 0;
     private int value;
@@ -27,12 +28,6 @@ public class AnnotationPresentation {
     static void tearDownAfterAll() {
         System.out.println("tearDownAfterAll()");
     }
-    @Test
-    @DisplayName("Test 1")
-    void test1() {
-        System.out.println("test1() - value: " + value);
-        assertEquals(1, value);
-    }
 
     @Test
     @DisplayName("Test 2")
@@ -40,6 +35,14 @@ public class AnnotationPresentation {
         System.out.println("test2() - value: " + value);
         assertEquals(2, value);
     }
+
+    @Test
+    @DisplayName("Test 1")
+    void test1() {
+        System.out.println("test1() - value: " + value);
+        assertEquals(1, value);
+    }
+
 
     @Test
     @Disabled

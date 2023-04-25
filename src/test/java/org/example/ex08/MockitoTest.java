@@ -25,6 +25,7 @@ public class MockitoTest {
         when(mockedList.get(0)).thenReturn("Johny");
 
         Assertions.assertThat(mockedList.get(0)).isEqualTo("Johny");
+        verify(mockedList).get(0);
     }
 
     @Test
